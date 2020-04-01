@@ -1,0 +1,34 @@
+Connect Four Game
+
+Step 1: Planning
+
+-- What HTML would be useful for the board game? --
+It would be helpful to have an HTML table with 7 td's across and 6 tr's down.
+Also want a tr above everything to let players click to drop a piece.
+Would be nice to have a header tag for a nice title.
+Also need a div for a scoreboard if we want to keep track of multiple games.
+A button would be handy in order to allow the user to start a new game.
+
+-- How could you represent a played piece in the HTML board? --
+Each td could have 3 different classes: blank, red, and blue.
+We could use CSS to make these 3 different classes display accordingly.
+
+-- In JavaScript, what would be a good structure for the in-memory game board? --
+An array of arrays (2d array) would be an appropriate data structure to represent the board.
+We could choose values (0,1,2) to represent blank, red, and blue states
+
+-- What might the game flow be? --
+The game starts by initializing the board to be completely blank.
+The game waits for a click event on the input tr (top row).
+Once a click happens, a piece is dropped in that column and the board is updated.
+The game then checks to see if someone has won (4 pieces in a row).
+If there is a winner, an alert is thrown. If not the next player becomes the "active turn" and the game continues.
+If the board fills up completely without a winner, then a tie should be declared.
+
+Useful functions:
+initializeBoard();
+dropPiece(color, col);
+findOpenCell(board, col);
+updateBoard(board, cellRow, cellCol);
+checkForWinner(board);
+checkForTie(board);
