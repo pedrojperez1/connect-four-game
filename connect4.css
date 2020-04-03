@@ -1,4 +1,21 @@
 /* game board table */
+body {
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+body div {
+  display: inline-block;
+}
+
+.button {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+}
+
+#game {
+  margin-top: 20px;
+}
 
 #board td {
   width: 50px;
@@ -9,20 +26,10 @@
 /* pieces are div within game table cells: draw as colored circles */
 
 .piece {
-  /* TODO: make into circles */
   margin: 5px;
   width: 80%;
   height: 80%;
   border-radius: 50%;
-}
-
-/* TODO: make pieces red/blue,  depending on player 1/2 piece */
-.player1 {
-  background-color: blue;
-}
-
-.player2 {
-  background-color: red;
 }
 
 /* column-top is table row of clickable areas for each column */
@@ -34,3 +41,47 @@
 #column-top td:hover {
   background-color: gold;
 }
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* .modal-content > div {
+  text-align: center;
+  margin: 20px;
+} */
