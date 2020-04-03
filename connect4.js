@@ -176,26 +176,26 @@ class Player {
   }
 }
 
-const startGameBtn = document.getElementById("startGameBtn");
-startGameBtn.onclick = () => {
-  new Game(6,7);
-  modal.style.display = "none";
-}
-
 // Get the modal
 const modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
 const btn = document.getElementById("newGameBtn");
-
-// Get the <span> element that closes the modal
-const span = document.getElementsByClassName("close")[0];
-
 // When the user clicks on the button, open the modal
 btn.onclick = () => { modal.style.display = "block"; }
 
+// Get the <span> element that closes the modal
+const span = document.getElementsByClassName("close")[0];
 // When the user clicks on <span> (x), close the modal
 span.onclick = () => { modal.style.display = "none"; }
+
+// Get the start game button (inside modal)
+const startGameBtn = document.getElementById("startGameBtn");
+// Start the game and close the modal
+startGameBtn.onclick = () => {
+  new Game(6,7);
+  modal.style.display = "none";
+}
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = (event) => {
